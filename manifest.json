@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Merge it",
+  "version": "0.1",
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "images/merge_16.png",
+    "32": "images/merge_32.png",
+    "48": "images/merge_48.png",
+    "128": "images/merge_128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*/*/pull/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
